@@ -17,9 +17,8 @@
 			setCookie("token", token, 7);  
 			setCookie('id', id, 7); */
 
-var doc = document.body;
-            fetch(['https://www.shufersal.co.il/']).then(function(response) { 
-                response.text().then(function(text) {
-                    doc.textContent = text;
-                });
-            }); 
+fetch("https://www.shufersal.co.il/").then(function (response) {
+  response.text().then(function (text) {
+    poemDisplay.textContent = text;
+  });
+});
